@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet"> 
+    <style>
+        body{
+            font-family: 'Lato', sans-serif;
+            text-align: center;
+            color:white;
+            background: #1E90FF;
+        }
+        a{
+            color: white;
+        }
+        button{
+            background: white;
+            color: #1E90FF;
+            border-radius: 12px;
+            outline: none;
+            border: none;
+
+            
+        }
+        button: focus {outline:0;}
+    </style>
+</head>
+<body>
+    <button onclick="nickname(event)">Genarate A Random Animal</button>
+    <h1 id="username"></h1>
+    <button onclick="reset(event)">Reset</button>
+    <script src="randanimal.js"></script>
+
+    <script>
+    function nickname(event){
+        event.preventDefault();
+        document.getElementById("username").innerHTML = animal_junk();
+    }
+    function reset(event){
+        event.preventDefault();
+        document.getElementById("username").innerHTML = "";
+    }
+    </script>
+</body>
+</html>
